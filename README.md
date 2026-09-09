@@ -1,45 +1,175 @@
-# HTML Tarea 1
+# Manual del proyecto HTML Tarea 1
 
-Proyecto académico compuesto por varias páginas creadas con HTML. Cada archivo
-reproduce el contenido de una imagen de referencia suministrada para la
-actividad.
+## Descripción
 
-## Contenido
+En este proyecto se crearon diferentes páginas web a partir de imágenes de
+referencia. Cada página fue desarrollada únicamente con HTML y conserva el
+nombre numérico del ejercicio correspondiente.
 
-- `1.html`: receta de berenjenas fritas.
-- `2.html`: página personal con una lista numerada.
-- `3.html`: página personal con listas anidadas.
-- `4.html`: noticias sobre programas de tecnología y negocios.
-- `5.html`: lista de destinos turísticos de América.
-- `6.html`: página personal con enlaces externos.
-- `8.html`: página de un concierto con imágenes.
-- `9.html`: cartelera de vuelos organizada en tablas.
-- `10.html`: página de recetas con imágenes y enlaces.
-- `11.html`: formulario de registro de usuarios.
-- `12.html`: página con un reproductor de audio.
-- `13.html`: página con un reproductor de video.
+Todos los documentos cuentan con la estructura básica de HTML, metadatos en la
+cabecera y una indentación de 2 espacios.
 
-## Tecnologías utilizadas
+## Estructura básica utilizada
 
-- HTML5.
-- Formularios HTML.
-- Tablas y listas.
-- Enlaces e imágenes.
-- Elementos multimedia de audio y video.
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Tu nombre completo">
+  <meta name="keywords" content="palabras relacionadas con la página">
+  <meta name="description" content="descripción de la página">
+  <title>imagen1</title>
+</head>
+<body>
+  <!-- Contenido de la página -->
+</body>
+</html>
+```
 
-## Ejecución
+## Trabajo realizado en cada página
 
-No es necesario instalar programas o dependencias adicionales. Para ejecutar
-una página, se debe abrir el archivo `.html` correspondiente en un navegador
-web.
+### 1.html
 
-También se puede utilizar la extensión Live Server de Visual Studio Code.
+Se creó una receta de berenjenas fritas. Se utilizaron títulos, párrafos y
+saltos de línea para organizar los ingredientes y la preparación.
 
-## Recursos multimedia
+### 2.html
+
+Se creó una página personal con una lista numerada de enlaces favoritos.
+
+### 3.html
+
+Se trabajaron listas anidadas. Dentro del primer elemento de una lista numerada
+se agregó una lista secundaria con viñetas.
+
+### 4.html
+
+Se creó una página de noticias sobre programas educativos. Se utilizaron
+títulos de diferentes niveles, párrafos, texto en negrita y texto en cursiva.
+
+### 5.html
+
+Se creó una lista de destinos turísticos. Los países aparecen en una lista
+principal y las ciudades se organizaron en listas numeradas secundarias.
+
+### 6.html
+
+Se creó una página personal con enlaces externos que permiten visitar Google,
+Aldea Global y un manual de HTML.
+
+### Punto 7
+
+No se creó `7.html` porque la imagen de referencia no era legible. En su lugar,
+se agregó `7.html` al archivo `.gitignore` para evitar que Git lo incluya si se
+crea accidentalmente.
+
+### 8.html
+
+Se creó una página de conciertos que utiliza las imágenes locales
+`concert_logo.png` y `concert.jpg.jpg`.
+
+### 9.html
+
+Se construyeron dos tablas para mostrar las llegadas y salidas de un aeropuerto.
+Las tablas contienen encabezados, filas, columnas y bordes.
+
+### 10.html
+
+Se creó una página de recetas con un logotipo, enlaces, una lista de
+ingredientes y una lista numerada para explicar la preparación.
+
+### 11.html
+
+Se desarrolló un formulario de registro con campos de texto, correo, edad,
+género, lista desplegable, comentarios, aceptación de condiciones y botón de
+registro.
+
+### 12.html
+
+Se agregó un reproductor de audio con controles. El archivo utilizado es
+`audio.mp3` y su creador es Djmks.
+
+### 13.html
+
+Se agregó un reproductor de video con controles. El archivo utilizado es
+`video.mp4` y su creador es TBIT.
+
+## Etiquetas utilizadas y su función
+
+| Etiqueta | Función |
+| --- | --- |
+| `<!DOCTYPE html>` | Indica que el documento utiliza HTML5. |
+| `<html>` | Contiene todo el documento HTML. |
+| `<head>` | Guarda la información de configuración que no aparece directamente en la página. |
+| `<meta>` | Define datos como la codificación, el autor, las palabras clave y la descripción. |
+| `<title>` | Establece el título que aparece en la pestaña del navegador. |
+| `<body>` | Contiene todos los elementos visibles de la página. |
+| `<header>` | Representa el encabezado de una página o sección. |
+| `<main>` | Contiene el contenido principal de la página. |
+| `<footer>` | Representa el pie de página. |
+| `<h1>` | Define el título principal. |
+| `<h2>` y `<h3>` | Definen títulos secundarios y subtítulos. |
+| `<p>` | Crea un párrafo. |
+| `<br>` | Realiza un salto de línea. |
+| `<b>` | Muestra el texto en negrita. |
+| `<i>` | Muestra el texto en cursiva. |
+| `<ol>` | Crea una lista numerada. |
+| `<ul>` | Crea una lista con viñetas. |
+| `<li>` | Representa un elemento dentro de una lista. |
+| `<a>` | Crea un enlace mediante el atributo `href`. |
+| `<img>` | Inserta una imagen mediante el atributo `src`. |
+| `<table>` | Crea una tabla. |
+| `<tr>` | Crea una fila dentro de una tabla. |
+| `<th>` | Crea una celda de encabezado en una tabla. |
+| `<td>` | Crea una celda de datos en una tabla. |
+| `<form>` | Agrupa los controles de un formulario. |
+| `<label>` | Describe el dato que debe ingresar el usuario. |
+| `<input>` | Crea campos de texto, correo, números, opciones y casillas. |
+| `<select>` | Crea una lista desplegable. |
+| `<option>` | Define una opción dentro de una lista desplegable. |
+| `<textarea>` | Crea un campo para escribir textos largos. |
+| `<button>` | Crea un botón. |
+| `<audio>` | Inserta un reproductor de audio. |
+| `<video>` | Inserta un reproductor de video. |
+| `<source>` | Indica la ubicación y el tipo de un archivo multimedia. |
+
+## Atributos importantes
+
+| Atributo | Función |
+| --- | --- |
+| `lang="es"` | Indica que el contenido está escrito en español. |
+| `charset="UTF-8"` | Permite mostrar correctamente tildes y caracteres especiales. |
+| `href` | Indica el destino de un enlace. |
+| `src` | Indica la ubicación de una imagen, audio o video. |
+| `alt` | Proporciona una descripción alternativa de una imagen. |
+| `controls` | Muestra los controles de reproducción de audio o video. |
+| `type` | Indica el tipo de campo o formato multimedia. |
+| `id` | Identifica un elemento de manera única. |
+| `name` | Asigna un nombre al dato enviado desde un formulario. |
+| `placeholder` | Muestra un ejemplo dentro de un campo. |
+
+## Cómo ejecutar el proyecto
+
+1. Abrir la carpeta del proyecto en Visual Studio Code.
+2. Seleccionar cualquiera de los archivos `.html`.
+3. Abrir el archivo en el navegador o utilizar la extensión Live Server.
+4. Verificar que las imágenes, el audio y el video estén en la misma carpeta y
+   tengan exactamente el mismo nombre escrito en el código.
+
+El proyecto no necesita instalaciones ni dependencias adicionales.
+
+## Créditos de recursos
 
 - Audio creado por Djmks.
 - Video creado por TBIT.
+- `concert_logo.png`: recurso de Vecteezy creado por Andres Ramos. Requiere
+  atribución según la licencia gratuita de Vecteezy.
+- `concert.jpg.jpg`: imagen proveniente de Pexels y obtenida mediante un artículo
+  de Radio Nacional de Colombia. Utilizada de acuerdo con la licencia gratuita
+  de Pexels.
+- Las demás imágenes deben incluir su autor, enlace original y licencia de uso.
 
-## Autor
+## Autor del proyecto
 
 Stiven Hernandez

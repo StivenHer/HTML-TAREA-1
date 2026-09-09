@@ -1,4 +1,4 @@
-# Manual del proyecto HTML Tarea 1
+# Manual del proyecto HTML Tarea 1 y Tarea 3
 
 ## Descripción
 
@@ -158,6 +158,101 @@ Se agregó un reproductor de video con controles. El archivo utilizado es
    tengan exactamente el mismo nombre escrito en el código.
 
 El proyecto no necesita instalaciones ni dependencias adicionales.
+
+## Control de versiones y publicación
+
+El proyecto se administró con Git y se publicó en dos repositorios remotos:
+GitHub y GitLab. Los archivos y commits son los mismos, pero cada plataforma
+tiene un nombre de remoto diferente.
+
+### Creación de la llave SSH
+
+Antes de conectar el proyecto con GitLab, se creó una llave SSH desde
+PowerShell con el siguiente comando:
+
+```powershell
+ssh-keygen -t ed25519 -C "correo@ejemplo.com"
+```
+
+Después de ejecutar el comando, se presionó `Enter` para utilizar la ubicación
+propuesta. También se podía escribir una contraseña para proteger la llave.
+
+La llave pública se copió con este comando:
+
+```powershell
+Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub | Set-Clipboard
+```
+
+El contenido copiado se agregó en la sección de llaves SSH de la cuenta de
+GitLab. Solamente se debe compartir el archivo `id_ed25519.pub`; la llave
+privada `id_ed25519` nunca se debe compartir, publicar ni subir al repositorio.
+
+Debido a que la conexión por el puerto 22 estaba bloqueada, se comprobó la
+conexión de GitLab mediante el puerto alternativo 443:
+
+```powershell
+ssh -T -p 443 git@altssh.gitlab.com
+```
+
+La primera vez apareció una solicitud para confirmar la identidad del servidor.
+Después de verificar que se trataba de GitLab, se escribió `yes`.
+
+### Configuración de los repositorios remotos
+
+Primero se revisaron los repositorios configurados:
+
+```powershell
+git remote -v
+```
+
+El repositorio de GitHub ya estaba registrado con el nombre `origin`. Luego se
+agregó el repositorio de GitLab con el nombre `gitlab` y usando el puerto 443:
+
+```powershell
+git remote add gitlab ssh://git@altssh.gitlab.com:443/stiven.hernandez.pere/html-tarea-1.git
+git remote -v
+```
+
+En este proyecto, los remotos quedaron organizados de esta manera:
+
+- `origin`: repositorio de GitHub.
+- `gitlab`: repositorio de GitLab.
+- `main`: rama principal del proyecto.
+
+### Guardar y publicar modificaciones
+
+Después de modificar un archivo en Visual Studio Code, los cambios se guardan
+en Git mediante los siguientes comandos:
+
+```powershell
+git status
+git add .
+git commit -m "Actualizar proyecto"
+```
+
+Para publicar únicamente en GitHub se utiliza:
+
+```powershell
+git push origin main
+```
+
+Para publicar únicamente en GitLab se utiliza:
+
+```powershell
+git push gitlab main
+```
+
+Para publicar los mismos cambios en las dos plataformas se ejecutan ambos
+comandos:
+
+```powershell
+git push origin main
+git push gitlab main
+```
+
+Al realizar la primera publicación en GitLab no fue necesario crear otro commit,
+porque el commit que ya se había enviado a GitHub también estaba guardado en el
+repositorio local. Un mismo commit puede enviarse a varios repositorios remotos.
 
 ## Créditos de recursos
 
